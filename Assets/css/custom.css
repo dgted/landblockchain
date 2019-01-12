@@ -1,0 +1,26 @@
+#navbar{
+    background-color:rgb(14, 87, 83);
+    color: black;
+}
+#navbar a{
+    color: rgb(225, 247, 247);
+}
+#sidebar{
+    background-color: rgb(53, 148, 143);
+    min-height: 82vh;
+}
+#sidebar a {
+    color: rgb(225, 247, 247);
+}
+.container{
+    background-color: rgb(14, 87, 83);
+}
+#content{
+    background-color: rgb(225, 247, 247);
+    min-height: 82vh;
+}
+.footer{
+    background-color: rgb(14, 87, 83);
+    padding: 5px 0;
+    color: rgb(225, 247, 247);
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Assets/css/custom.css">
+    <link href="Assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="container-fluid navbar navbar-expand" id="navbar">
+        <a class="navbar-brand" href="#">LandRegistryManagement</a>
+    </nav>
+    <!-- sidebar -->
+    <div class="container-fluid" id="content" >
+        <div class="row">
+            <div class="col-md-2" id="sidebar">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="adduser.html" class="nav-link">Add User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="addplot.html" class="nav-link">Add Plot</a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="addkhatian.html" class="nav-link">Add Khatian</a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="claculatehash.html" class="nav-link">Calculate Hash</a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="search.html" class="nav-link">Search</a>
+                    </li>
+                </ul>        
+            </div>
+    <!-- body -->
+            <div class="col-md-10">
+                <h1 style="text-align:center">Data Entry</h1>
+                <form class="row justify-content-around">
+                    <div class="col-12 form-group row">
+                        <label class="col-2 col-form-label">Full Name</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="col-12 form-group row">
+                        <label class="col-2 col-form-label">Full Name</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text"required>
+                        </div>
+                    </div>
+                    <div class="col-12 form-group row">
+                        <label class="col-2 col-form-label">Full Name</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text"required>
+                        </div>
+                    </div>
+                    <div class="col-12 form-group row">
+                        <label for="gender" class="col-2 col-form-label">District</label>
+                        <div class="col-10" >
+                            <select class="form-control" id="District" name="district" required>
+                                <option value="0">select</option>
+                                <option value="1">Dhaka</option>
+                                <option value="2">Khulna</option>
+                                <option value="3">Rajshahi</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 justify-content-around form-group row">
+                        <table class="table table-striped">
+                            <caption>Desired data</caption>
+                            <thead>
+                                <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>john@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>john@example.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-12 justify-content-around form-group row">
+                        <button class="btn btn-secondary" style="width:100px;"  type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <p style="text-align:center">&copy; CSE Decipline,Khulna University<p>
+        </div>
+    </footer>
+    <script src="Assets/Js/web3.min.js"></script>
+    <script src="Assets/Js/jquery.min.js"></script>
+    <script src="Assets/Js/popper.min.js"></script>
+    <script src="Assets/Js/bootstrap.min.js"></script>1
+    <script src="Assets/Js/web3Init.js"></script>
+    <script>
+            
+        // if (typeof web3 !== 'undefined') {
+        //     web3 = new Web3(web3.currentProvider);
+        // } else {
+        //     // set the provider you want from Web3.providers
+        //     // web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby.infura.io/v3/8cc5ad5dd4754880896babcc1e5bcc4f"));
+        //     web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/8cc5ad5dd4754880896babcc1e5bcc4f"));
+        //     // web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
+        // }
+        // console.log(web3)
+        // // console.log(web3.fromAscii("1254amihd"))
+        // var accountAddress =  web3.eth.defaultAccount = web3.eth.accounts[0];
+        // console.log(accountAddress);
+        // var LandContract = web3.eth.contract([{"constant":false,"inputs":[{"name":"_khatianiId","type":"uint64"},{"name":"_plotHash","type":"bytes32"},{"name":"_percentOwn","type":"uint16"},{"name":"_buyFrom","type":"bytes32"},{"name":"_user","type":"uint256[]"},{"name":"_percentage","type":"uint16[]"}],"name":"addKhatianFromOld","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getPlotArrayLen","outputs":[{"name":"len","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_division","type":"string"},{"name":"_district","type":"string"},{"name":"_thana","type":"string"},{"name":"_JLNo","type":"uint16"},{"name":"_plotNo","type":"uint16"},{"name":"_plotType","type":"uint8"},{"name":"_plotArea","type":"uint32"}],"name":"addPlot","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_nid","type":"uint256"}],"name":"getUserByNid","outputs":[{"name":"fullName","type":"bytes32"},{"name":"fatheName","type":"bytes32"},{"name":"district","type":"bytes32"},{"name":"thana","type":"bytes32"},{"name":"postCode","type":"uint24"},{"name":"village","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"khatianHash","type":"bytes32"}],"name":"getKhatianByHash","outputs":[{"name":"khatianiId","type":"uint64"},{"name":"plotHash","type":"bytes32"},{"name":"percentOwn","type":"uint16"},{"name":"buyFrom","type":"bytes32"},{"name":"sellTo","type":"bytes32[]"},{"name":"sellPercentage","type":"uint16[]"},{"name":"ownerArray","type":"uint256[]"},{"name":"perOwnerPercentage","type":"uint16[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_khatianiId","type":"uint64"},{"name":"_plotHash","type":"bytes32"},{"name":"_percentOwn","type":"uint16"},{"name":"_user","type":"uint256[]"},{"name":"_percentage","type":"uint16[]"}],"name":"addKhatianNew","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_uid","type":"uint256"}],"name":"getUserOwnedByUid","outputs":[{"name":"number","type":"uint256"},{"name":"khatianList","type":"bytes32[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_uid","type":"uint256"},{"name":"_khatianHash","type":"bytes32"}],"name":"addUserOwned","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"id","type":"uint256"}],"name":"getUserIdById","outputs":[{"name":"UserId","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"id","type":"uint256"}],"name":"getKhatianHasById","outputs":[{"name":"khatianHash","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"plotHash","type":"bytes32"}],"name":"getPlotByHash","outputs":[{"name":"division","type":"bytes32"},{"name":"district","type":"bytes32"},{"name":"thana","type":"bytes32"},{"name":"JLNo","type":"uint16"},{"name":"plotNo","type":"uint16"},{"name":"plotType","type":"uint8"},{"name":"plotArea","type":"uint32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getKhatianArrayLen","outputs":[{"name":"len","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_fullName","type":"string"},{"name":"_fatheName","type":"string"},{"name":"_district","type":"string"},{"name":"_thana","type":"string"},{"name":"_postCode","type":"uint24"},{"name":"_village","type":"string"},{"name":"_nid","type":"uint256"}],"name":"creatNewUser","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"id","type":"uint256"}],"name":"getPlotHashById","outputs":[{"name":"plotHash","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getUserArrayLen","outputs":[{"name":"len","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"name":"plotHash","type":"bytes32"}],"name":"creationOfplot","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"nid","type":"uint256"}],"name":"creationOfUser","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"khatianHash","type":"bytes32"}],"name":"creationOfKhatian","type":"event"}]);
+        // var contract = LandContract.at('0x0e6Ec4aA7fa285836152481bE0f21379cE0FDBCe');
+        // console.log(contract);
+
+        // var selection_type  = $("#select_creation_type").val();
+        // if (selection_type == 1){
+        //     $(".old_title").hide();
+        // }
+        
+        // var success = $(".alert-success");
+        // var fail = $(".alert-danger");
+        // success.hide();
+        // fail.hide();
+        
+        // $('#select_creation_type').change(function(){
+        //     var selection_type1  = $("#select_creation_type").val();
+        //     console.log(selection_type1)
+        //     if (selection_type1 == 1){
+        //         $(".old_title").hide();
+        //     }else if(selection_type1 == 2){
+        //         $(".old_title").show();
+        //     }
+        // });
+
+        // var creationOftitleEvent = contract.creationOftitle();
+        // creationOftitleEvent.watch(function(error, result){
+        //     if (!error)
+        //         {
+        //             $("#msg").html(result.args.titleHash);
+        //         } else {
+        //             console.log(error);
+        //         }
+        // });
+
+        // $("#btnCreate").click(function(){
+        //     var serialNo = $("#_serialNo").val();
+        //     var bookNo = $("#_bookNo").val();
+        //     var titleNo =$("#_titleNo").val();
+        //     var titleType  = $("#_titleType").val();
+        //     var titleArea = $("#_titleArea").val();
+        //     var officeAddress = $("#_officeAddress").val();
+        //     var moujaNo = web3.fromAscii($("#_moujaNo").val());
+        //     var lineNo = web3.fromAscii($("#_lineNo").val());
+        //     var buyer = $("#_buyer").val();
+        //     if($("#select_creation_type").val() == 1 && serialNo != '' && bookNo != '' && titleNo != '' &&
+        //         titleType != '' && titleArea != '' &&  officeAddress != '' && moujaNo != '' &&
+        //         lineNo != '' && buyer != '' ){
+        //         contract.creatNewTitle(serialNo, bookNo, titleNo, titleType, titleArea, officeAddress, moujaNo, lineNo, buyer,(err, res)=>{
+        //             if(err){
+        //                 fail.show();
+        //                 success.hide();
+        //             }else{
+        //                 fail.hide();
+        //                 success.show();
+        //             }
+        //         });
+        //     }else if($("#select_creation_type").val() == 2 && serialNo != '' && bookNo != '' && titleNo != '' &&
+        //         titleType != '' && titleArea != '' && percentOwn != '' &&  officeAddress != '' && moujaNo != '' &&
+        //         lineNo != '' && seller != '' && buyer != '' && buyFormTitleHash != ''){
+        //         var seller = $("#_seller").val();
+        //         var percentOwn = $("#_percentOwn").val();
+        //         var buyFormTitleHash = $("#_buyFormTitleHash").val();
+        //         contract.creatNewTitleFormExistingOne(serialNo, bookNo, titleNo, titleType, titleArea, percentOwn, officeAddress, moujaNo, lineNo, seller, buyer, buyFormTitleHash,(err, res)=>{
+        //             if(err){
+        //                 fail.show();
+        //                 success.hide();
+        //             }else{
+        //                 fail.hide();
+        //                 success.show();
+        //             }
+        //         });
+        //     }
+        //     else{
+        //         console.log("errrasdasdasdrrr");
+        //     }
+        // });
+
+    </script>
+</body>
+</html>

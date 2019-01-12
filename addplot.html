@@ -1,0 +1,174 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Add Plot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Assets/css/custom.css">
+    <link href="Assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="container-fluid navbar navbar-expand" id="navbar">
+        <a class="navbar-brand" href="#">Land Ownership Management</a>
+    </nav>
+    <!-- sidebar -->
+    <div class="container-fluid" id="content" >
+        <div class="row">
+            <div class="col-md-2" id="sidebar">
+                <ul class="nav flex-column">
+                    <!-- <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="adduser.html" class="nav-link">Add User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="addplot.html" class="nav-link">Add Plot</a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="addkhatian.html" class="nav-link">Add Khatian</a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="claculatehash.html" class="nav-link">Calculate Hash</a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="search.html" class="nav-link">Search</a>
+                    </li>
+                </ul>        
+            </div>
+    <!-- body -->
+            <div class="col-md-10">
+                <h1 style="text-align:center">Add New Plot</h1>
+                <div class="row justify-content-around">
+                    <div class="col-12 form-group row">
+                        <label class="col-2 col-form-label">Division</label>
+                        <div class="col-10">
+                            <input id="division" class="form-control" type=>
+                        </div>
+                    </div>
+                    <div class="col-12 form-group row">
+                        <label class="col-2 col-form-label">District</label>
+                        <div class="col-10">
+                            <input id="district" class="form-control" type="text" >
+                        </div>
+                    </div>
+                    <div class="col-12 form-group row">
+                        <label class="col-2 col-form-label">Thana</label>
+                        <div class="col-10">
+                            <input id="thana" class="form-control" type="text" >
+                        </div>
+                    </div>
+                    <div class="col-12 form-group row">
+                        <label class="col-2 col-form-label">JL No</label>
+                        <div class="col-10">
+                            <input id="JLNo" class="form-control" type="number" >
+                        </div>
+                    </div>
+                    <div class="col-12 form-group row">
+                        <label class="col-2 col-form-label">Plot No</label>
+                        <div class="col-10">
+                            <input id="plotNo" class="form-control" type="number" >
+                        </div>
+                    </div>
+                    <!-- <div class="col-12 form-group row">
+                        <label class="col-2 col-form-label">Plot Type</label>
+                        <div class="col-10">
+                            <input id="plotType" class="form-control" type="number" >
+                        </div>
+                    </div> -->
+
+                    <div class="col-12 form-group row">
+                        <label for="plotType" class="col-2 col-form-label">Plot Type</label>
+                        <div class="col-10">
+                            <select class="form-control" id="plotType">
+                                <option selected value="0">Select Land Type</option>
+                                <option value="1">Housing</option>
+                                <option value="2">Farming</option>
+                                <option value="3">Unused</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-12 form-group row">
+                        <label class="col-2 col-form-label">Area (m<sup>2</sup>)</label>
+                        <div class="col-10">
+                            <input id="plotArea" class="form-control" type="number">
+                        </div>
+                    </div>
+                    <div class="col-12 form-group row" id="success">    
+                        <div class="alert alert-success alert-dismissible fade show col-12">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Success!</strong>
+                        </div>
+                    </div>
+                    <div class="col-12 form-group row" id="fail">        
+                        <div class="alert alert-danger alert-dismissible fade show col-12">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Failed!</strong> see console for Detail log.
+                        </div>
+                    </div>
+                    <div class="col-12 justify-content-around form-group row">
+                        <button id="btnAddUser" class="btn btn-secondary" style="width:100px;">Add Plot</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <p style="text-align:center">&copy; CSE Decipline,Khulna University<p>
+        </div>
+    </footer>
+    <script src="Assets/Js/web3.min.js"></script>
+    <script src="Assets/Js/jquery.min.js"></script>
+    <script src="Assets/Js/popper.min.js"></script>
+    <script src="Assets/Js/bootstrap.min.js"></script>
+    <script src="Assets/Js/web3Init.js"></script>
+    
+    <script>
+        $('#success').hide();
+        $('#fail').hide();
+
+        function forceInputUppercase(e)
+        {
+            var start = e.target.selectionStart;
+            var end = e.target.selectionEnd;
+            e.target.value = e.target.value.toUpperCase();
+            e.target.setSelectionRange(start, end);
+        }
+
+        document.getElementById("division").addEventListener("keyup", forceInputUppercase, false);
+        document.getElementById("district").addEventListener("keyup", forceInputUppercase, false);
+        document.getElementById("thana").addEventListener("keyup", forceInputUppercase, false);
+
+        $("#btnAddUser").click(function(){
+            var division = $("#division").val();
+            var district = $("#district").val();
+            var thana = $("#thana").val();
+            var JLNo  = parseInt($("#JLNo").val());
+            var plotNo = parseInt($("#plotNo").val());
+            var plotType = parseInt($("#plotType").val());
+            var plotArea = parseInt($("#plotArea").val());
+            // console.log( division,district,thana,JLNo,plottypeof postCode,typeof nid);
+
+            contract.addPlot(division, district, thana, JLNo, plotNo, plotType, plotArea,{gas:1000000},(err, res)=>{
+                if(err){
+                    console.log(err);
+                    $('#fail').show();
+                    $('#success').hide();
+                }else{
+                    console.log("success");
+                    $('#success').show();        
+                    $('#fail').hide();
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

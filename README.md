@@ -37,13 +37,7 @@ Bangladesh.
 ## Supervisors
 
 Dr. Kazi Masudul Alam,
-Associate Professor,
-Computer Science and Engineering Discipline,
-Khulna University,
-Bangladesh.
-
-Dr. Abu Shamim Mohammad Arif,
-Professor,
+Associate Professor, DGTED Lab
 Computer Science and Engineering Discipline,
 Khulna University,
 Bangladesh.

@@ -1,4 +1,4 @@
-# Applying Blockchain Technology for Land Ownership Management of Bangladesh
+# A Blockchain-based Land Title Management System for Bangladesh (Public Blockchain using Ethereum)
 
 ## What is this repository for?
 

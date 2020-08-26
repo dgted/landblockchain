@@ -37,7 +37,7 @@ Bangladesh.
 ## Supervisors
 
 Dr. Kazi Masudul Alam,
-Associate Professor, DGTED Lab
+Associate Professor, DGTED Lab (www.dgted.com)
 Computer Science and Engineering Discipline,
 Khulna University,
 Bangladesh.

@@ -41,3 +41,5 @@ Associate Professor, DGTED Lab (www.dgted.com)
 Computer Science and Engineering Discipline,
 Khulna University,
 Bangladesh.
+
+Write a thank you note to [ kazi AT cseku DOT ac DOT bd] if you find it helpful.
